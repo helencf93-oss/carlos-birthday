@@ -1,0 +1,119 @@
+<svg 
+xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1000 450">
+
+<g 
+fill="none"
+stroke="#b8b0a5"
+stroke-width="2"
+opacity="0.45">
+
+
+<!-- América do Norte -->
+
+<path d="
+M120 130
+L170 95
+L250 90
+L290 130
+L260 170
+L220 180
+L190 220
+L140 200
+L110 160
+Z"/>
+
+
+<!-- América do Sul -->
+
+<path d="
+M270 220
+L330 250
+L350 320
+L320 390
+L280 340
+L260 280
+Z"/>
+
+
+
+<!-- Europa -->
+
+<path d="
+M470 120
+L540 100
+L600 120
+L580 160
+L520 170
+L470 150
+Z"/>
+
+
+
+<!-- África -->
+
+<path d="
+M500 180
+L610 180
+L650 250
+L600 340
+L520 300
+L480 240
+Z"/>
+
+
+
+<!-- Ásia -->
+
+<path d="
+M600 120
+L780 100
+L880 160
+L820 220
+L700 200
+L620 170
+Z"/>
+
+
+
+<!-- Austrália -->
+
+<path d="
+M760 300
+L850 290
+L900 340
+L850 380
+L770 350
+Z"/>
+
+
+
+<!-- Linhas decorativas do mapa -->
+
+<path d="
+M0 225
+H1000"/>
+
+<path d="
+M500 0
+V450"/>
+
+
+</g>
+
+
+<!-- Rota Brasil Austrália -->
+
+<path
+d="
+M300 280
+C450 160 650 180 820 330
+"
+fill="none"
+stroke="#b08d57"
+stroke-width="3"
+stroke-dasharray="8 12"
+opacity="0.8"/>
+
+
+</svg>
