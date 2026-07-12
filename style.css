@@ -1,0 +1,291 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    color:#fff;
+    overflow:hidden;
+    background:transparent;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+/* Container principal */
+
+.container{
+
+    width:90%;
+    max-width:900px;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* Título */
+
+h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:62px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+/* Subtítulo */
+
+.subtitle{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#ececec;
+
+    margin-bottom:45px;
+
+}
+
+/* Brasil -> Austrália */
+
+.map{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:45px;
+
+}
+
+.country{
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+.line{
+
+    width:220px;
+
+    height:2px;
+
+    background:linear-gradient(
+    to right,
+    #d4af37,
+    white,
+    #d4af37);
+
+    position:relative;
+
+}
+
+.line::after{
+
+    content:"";
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    position:absolute;
+
+    right:-5px;
+    top:-5px;
+
+}
+
+/* Contagem */
+
+#countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Caixas */
+
+.box{
+
+    width:140px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.box span{
+
+    display:block;
+
+    font-size:52px;
+
+    font-weight:700;
+
+}
+
+.box small{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#cccccc;
+
+}
+
+/* Texto inferior */
+
+.footer-text{
+
+    margin-top:45px;
+
+    font-size:18px;
+
+    color:#f2f2f2;
+
+    line-height:1.8;
+
+}
+
+/* Mensagem final */
+
+#finalMessage{
+
+    margin-top:35px;
+
+    font-size:34px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#ffd700;
+
+}
+
+/* Avião */
+
+.plane{
+
+    position:absolute;
+
+    top:15%;
+
+    left:-80px;
+
+    font-size:34px;
+
+    animation:fly 18s linear infinite;
+
+    z-index:1;
+
+}
+
+@keyframes fly{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(calc(100vw + 150px));
+
+    }
+
+}
+
+/* Estrelas */
+
+#stars{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    left:0;
+    top:0;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    .container{
+
+        padding:35px;
+
+    }
+
+    .box{
+
+        width:110px;
+
+    }
+
+    .box span{
+
+        font-size:36px;
+
+    }
+
+}
