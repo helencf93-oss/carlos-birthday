@@ -1,119 +1,56 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
+
 
 body{
-    font-family:'Montserrat',sans-serif;
-    color:#fff;
-    overflow:hidden;
-    background:transparent;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+background:#faf8f4;
 
-    min-height:100vh;
+color:#333;
+
+font-family:'Montserrat',sans-serif;
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 }
 
-/* Container principal */
+
+.page{
+
+width:100%;
+
+}
+
 
 .container{
 
-    width:90%;
-    max-width:900px;
+text-align:center;
 
-    padding:60px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(20px);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:2;
+padding:40px;
 
 }
 
-/* Título */
 
 h1{
 
-    font-family:'Cormorant Garamond',serif;
+font-family:'Cormorant Garamond',serif;
 
-    font-size:62px;
+font-size:64px;
 
-    font-weight:600;
+font-weight:500;
 
-    margin-bottom:15px;
+margin-bottom:70px;
 
-}
-
-/* Subtítulo */
-
-.subtitle{
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    color:#ececec;
-
-    margin-bottom:45px;
-
-}
-
-/* Brasil -> Austrália */
-
-.map{
-
-/* =========================
-   ROTA BRASIL - AUSTRÁLIA
-========================= */
-
-
-.map{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:25px;
-
-    margin-bottom:45px;
-
-}
-
-
-.location{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    font-size:35px;
-
-}
-
-
-.location span{
-
-    font-size:14px;
-
-    margin-top:8px;
-
-    letter-spacing:1px;
+color:#222;
 
 }
 
@@ -121,271 +58,216 @@ h1{
 
 .route{
 
-    width:260px;
+display:flex;
 
-    height:60px;
+align-items:center;
 
-    position:relative;
+justify-content:center;
 
-}
+gap:25px;
 
-
-
-.dashed-line{
-
-    position:absolute;
-
-    top:50%;
-
-    width:100%;
-
-    border-top:2px dashed #D4AF37;
+margin-bottom:80px;
 
 }
 
 
 
-.plane-route{
+.country span{
 
-    position:absolute;
-
-    top:18px;
-
-    left:0;
-
-    width:35px;
-
-    animation:routeMove 8s linear infinite;
-
-}
-
-
-.plane-route img{
-
-    width:100%;
+font-size:45px;
 
 }
 
 
 
-@keyframes routeMove{
+.country p{
 
+margin-top:10px;
 
-    from{
+font-size:15px;
 
-        left:0;
-
-    }
-
-
-    to{
-
-        left:calc(100% - 35px);
-
-    }
-
+letter-spacing:1px;
 
 }
 
-/* Contagem */
 
-#countdown{
 
-    display:flex;
+.path{
 
-    justify-content:center;
+width:280px;
 
-    gap:25px;
+position:relative;
 
-    flex-wrap:wrap;
+height:50px;
 
 }
 
-/* Caixas */
 
-.box{
 
-    width:140px;
+.dashed{
 
-    padding:25px;
+position:absolute;
 
-    border-radius:20px;
+top:50%;
 
-    background:rgba(255,255,255,.06);
+width:100%;
 
-    border:1px solid rgba(255,255,255,.12);
+border-top:1px dashed #b08d57;
 
 }
 
-.box span{
 
-    display:block;
-
-    font-size:52px;
-
-    font-weight:700;
-
-}
-
-.box small{
-
-    font-size:14px;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    color:#cccccc;
-
-}
-
-/* Texto inferior */
-
-.footer-text{
-
-    margin-top:45px;
-
-    font-size:18px;
-
-    color:#f2f2f2;
-
-    line-height:1.8;
-
-}
-
-/* Mensagem final */
-
-#finalMessage{
-
-    margin-top:35px;
-
-    font-size:34px;
-
-    font-family:'Cormorant Garamond',serif;
-
-    color:#ffd700;
-
-}
-
-/* Avião */
 
 .plane{
 
-  .plane{
+position:absolute;
 
-    position:absolute;
+width:38px;
 
-    top:15%;
+top:8px;
 
-    left:-100px;
+left:0;
 
-    width:70px;
-
-    animation:fly 18s linear infinite;
-
-    z-index:1;
+animation:travel 7s linear infinite;
 
 }
 
 
-.plane img{
 
-    width:100%;
+@keyframes travel{
 
-    display:block;
 
-}
+0%{
 
-@keyframes fly{
-
-    from{
-
-        transform:translateX(0);
-
-    }
-
-    to{
-
-        transform:translateX(calc(100vw + 150px));
-
-    }
+left:0;
 
 }
 
-/* Estrelas */
 
-#stars{
+100%{
 
-    position:fixed;
-
-    width:100%;
-    height:100%;
-
-    left:0;
-    top:0;
-
-    overflow:hidden;
-
-    z-index:0;
+left:calc(100% - 38px);
 
 }
 
-/* Responsivo */
-
-@media(max-width:768px){
-
-    h1{
-
-        font-size:42px;
-
-    }
-
-    .container{
-
-        padding:35px;
-
-    }
-
-    .box{
-
-        width:110px;
-
-    }
-
-    .box span{
-
-        font-size:36px;
-
-    }
 
 }
-/* =========================
-   MENSAGEM FINAL
-========================= */
+
+
+
+
+#countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+}
+
+
+
+#countdown div{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+#countdown strong{
+
+font-size:70px;
+
+font-weight:400;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#222;
+
+}
+
+
+
+#countdown span{
+
+font-size:12px;
+
+text-transform:uppercase;
+
+letter-spacing:3px;
+
+color:#777;
+
+}
+
+
+
+.date{
+
+margin-top:50px;
+
+font-size:16px;
+
+color:#777;
+
+}
+
 
 
 #finalMessage{
 
-    opacity:0;
+display:none;
 
-    transform:translateY(20px);
+font-family:'Cormorant Garamond',serif;
 
-    transition:all 2s ease;
+font-size:70px;
 
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:55px;
-
-    color:#D4AF37;
+color:#b08d57;
 
 }
 
 
 
-#finalMessage.show{
+@media(max-width:700px){
 
-    opacity:1;
 
-    transform:translateY(0);
+h1{
+
+font-size:45px;
+
+}
+
+
+.route{
+
+gap:10px;
+
+}
+
+
+.path{
+
+width:120px;
+
+}
+
+
+#countdown{
+
+gap:15px;
+
+}
+
+
+#countdown strong{
+
+font-size:45px;
+
+}
+
 
 }
