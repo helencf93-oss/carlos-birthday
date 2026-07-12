@@ -212,17 +212,28 @@ h1{
 
 .plane{
 
+  .plane{
+
     position:absolute;
 
     top:15%;
 
-    left:-80px;
+    left:-100px;
 
-    font-size:34px;
+    width:70px;
 
     animation:fly 18s linear infinite;
 
     z-index:1;
+
+}
+
+
+.plane img{
+
+    width:100%;
+
+    display:block;
 
 }
 
