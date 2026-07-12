@@ -1,65 +1,75 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
 body{
 
-background:#faf8f4;
+    background:#faf8f4;
 
-color:#222;
+    color:#222;
 
-font-family:'Montserrat',sans-serif;
+    font-family:'Montserrat', sans-serif;
 
-min-height:100vh;
+    min-height:100vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
 }
 
 
+
+/* CONTAINER PRINCIPAL */
 
 .container{
 
-text-align:center;
+    width:100%;
 
-width:100%;
+    max-width:1000px;
 
-padding:40px;
+    text-align:center;
+
+    padding:40px;
 
 }
 
 
+
+/* TITULO */
 
 h1{
 
-font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond', serif;
 
-font-size:64px;
+    font-size:64px;
 
-font-weight:500;
+    font-weight:500;
 
-margin-bottom:50px;
+    margin-bottom:45px;
+
+    color:#222;
 
 }
 
 
 
+/* MAPA */
+
 .map-container{
 
-position:relative;
+    position:relative;
 
-width:750px;
+    width:850px;
 
-max-width:90vw;
+    max-width:90vw;
 
-margin:auto;
+    margin:0 auto 40px;
 
 }
 
@@ -67,19 +77,23 @@ margin:auto;
 
 .world-map{
 
-width:100%;
+    width:100%;
 
-opacity:.35;
+    display:block;
+
+    opacity:0.55;
 
 }
 
 
 
+/* PONTOS DOS PAÍSES */
+
 .location{
 
-position:absolute;
+    position:absolute;
 
-font-size:35px;
+    font-size:35px;
 
 }
 
@@ -87,9 +101,9 @@ font-size:35px;
 
 .brazil{
 
-left:22%;
+    left:27%;
 
-top:52%;
+    top:59%;
 
 }
 
@@ -97,79 +111,85 @@ top:52%;
 
 .australia{
 
-right:13%;
+    right:13%;
 
-top:62%;
+    top:69%;
 
 }
 
 
+
+/* LINHA DA ROTA */
 
 .route-line{
 
-position:absolute;
+    position:absolute;
 
-left:28%;
+    left:30%;
 
-top:57%;
+    top:60%;
 
-width:48%;
+    width:45%;
 
-border-top:2px dashed #b08d57;
+    border-top:2px dashed #b08d57;
 
-transform:rotate(-10deg);
+    transform:rotate(-12deg);
 
 }
 
 
+
+/* AVIÃO */
 
 .plane{
 
-position:absolute;
+    position:absolute;
 
-width:45px;
+    width:50px;
 
-left:28%;
+    left:30%;
 
-top:50%;
+    top:53%;
 
-animation:fly 8s linear infinite;
+    animation:fly 8s linear infinite;
 
 }
 
 
+
+/* MOVIMENTO DO AVIÃO */
 
 @keyframes fly{
 
 
-from{
+    from{
 
-left:28%;
+        left:30%;
 
-}
+    }
 
 
+    to{
 
-to{
+        left:72%;
 
-left:75%;
-
-}
-
+    }
 
 }
 
 
+
+/* CONTADOR */
 
 #countdown{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-gap:45px;
+    gap:45px;
 
-margin-top:50px;
+    margin-top:45px;
 
 }
 
@@ -177,58 +197,140 @@ margin-top:50px;
 
 #countdown div{
 
-display:flex;
+    display:flex;
 
-flex-direction:column;
+    flex-direction:column;
 
-}
-
-
-
-strong{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:70px;
-
-font-weight:400;
+    align-items:center;
 
 }
 
 
 
-span{
+#countdown strong{
 
-font-size:12px;
+    font-family:'Cormorant Garamond', serif;
 
-letter-spacing:3px;
+    font-size:75px;
 
-text-transform:uppercase;
+    font-weight:400;
 
-color:#777;
+    line-height:1;
+
+    color:#222;
 
 }
 
 
+
+#countdown span{
+
+    margin-top:10px;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    color:#777;
+
+}
+
+
+
+/* DATA */
 
 .date{
 
-margin-top:35px;
+    margin-top:40px;
 
-color:#777;
+    font-size:16px;
+
+    color:#777;
 
 }
 
 
 
+/* FINAL */
+
 #finalMessage{
 
-display:none;
+    display:none;
 
-font-family:'Cormorant Garamond',serif;
+    margin-top:50px;
 
-font-size:70px;
+    font-family:'Cormorant Garamond', serif;
 
-color:#b08d57;
+    font-size:75px;
+
+    color:#b08d57;
+
+}
+
+
+
+/* CELULAR */
+
+@media(max-width:700px){
+
+
+    .container{
+
+        padding:20px;
+
+    }
+
+
+
+    h1{
+
+        font-size:45px;
+
+        margin-bottom:30px;
+
+    }
+
+
+
+    .map-container{
+
+        width:100%;
+
+    }
+
+
+
+    .location{
+
+        font-size:25px;
+
+    }
+
+
+
+    .plane{
+
+        width:35px;
+
+    }
+
+
+
+    #countdown{
+
+        gap:15px;
+
+    }
+
+
+
+    #countdown strong{
+
+        font-size:45px;
+
+    }
+
 
 }
