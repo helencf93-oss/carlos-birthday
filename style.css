@@ -359,3 +359,33 @@ h1{
     }
 
 }
+/* =========================
+   MENSAGEM FINAL
+========================= */
+
+
+#finalMessage{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:all 2s ease;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:55px;
+
+    color:#D4AF37;
+
+}
+
+
+
+#finalMessage.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
