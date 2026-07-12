@@ -9,35 +9,32 @@ body{
 
 background:#faf8f4;
 
-color:#333;
+color:#222;
 
 font-family:'Montserrat',sans-serif;
 
-height:100vh;
+min-height:100vh;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
 
-}
-
-
-.page{
-
-width:100%;
+align-items:center;
 
 }
+
 
 
 .container{
 
 text-align:center;
 
+width:100%;
+
 padding:40px;
 
 }
+
 
 
 h1{
@@ -48,71 +45,79 @@ font-size:64px;
 
 font-weight:500;
 
-margin-bottom:70px;
-
-color:#222;
+margin-bottom:50px;
 
 }
 
 
 
-.route{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:25px;
-
-margin-bottom:80px;
-
-}
-
-
-
-.country span{
-
-font-size:45px;
-
-}
-
-
-
-.country p{
-
-margin-top:10px;
-
-font-size:15px;
-
-letter-spacing:1px;
-
-}
-
-
-
-.path{
-
-width:280px;
+.map-container{
 
 position:relative;
 
-height:50px;
+width:750px;
+
+max-width:90vw;
+
+margin:auto;
 
 }
 
 
 
-.dashed{
-
-position:absolute;
-
-top:50%;
+.world-map{
 
 width:100%;
 
-border-top:1px dashed #b08d57;
+opacity:.35;
+
+}
+
+
+
+.location{
+
+position:absolute;
+
+font-size:35px;
+
+}
+
+
+
+.brazil{
+
+left:22%;
+
+top:52%;
+
+}
+
+
+
+.australia{
+
+right:13%;
+
+top:62%;
+
+}
+
+
+
+.route-line{
+
+position:absolute;
+
+left:28%;
+
+top:57%;
+
+width:48%;
+
+border-top:2px dashed #b08d57;
+
+transform:rotate(-10deg);
 
 }
 
@@ -122,37 +127,37 @@ border-top:1px dashed #b08d57;
 
 position:absolute;
 
-width:38px;
+width:45px;
 
-top:8px;
+left:28%;
 
-left:0;
+top:50%;
 
-animation:travel 7s linear infinite;
+animation:fly 8s linear infinite;
+
+}
+
+
+
+@keyframes fly{
+
+
+from{
+
+left:28%;
 
 }
 
 
 
-@keyframes travel{
+to{
 
-
-0%{
-
-left:0;
-
-}
-
-
-100%{
-
-left:calc(100% - 38px);
+left:75%;
 
 }
 
 
 }
-
 
 
 
@@ -162,7 +167,9 @@ display:flex;
 
 justify-content:center;
 
-gap:40px;
+gap:45px;
+
+margin-top:50px;
 
 }
 
@@ -178,27 +185,25 @@ flex-direction:column;
 
 
 
-#countdown strong{
+strong{
+
+font-family:'Cormorant Garamond',serif;
 
 font-size:70px;
 
 font-weight:400;
 
-font-family:'Cormorant Garamond',serif;
-
-color:#222;
-
 }
 
 
 
-#countdown span{
+span{
 
 font-size:12px;
 
-text-transform:uppercase;
-
 letter-spacing:3px;
+
+text-transform:uppercase;
 
 color:#777;
 
@@ -208,9 +213,7 @@ color:#777;
 
 .date{
 
-margin-top:50px;
-
-font-size:16px;
+margin-top:35px;
 
 color:#777;
 
@@ -227,47 +230,5 @@ font-family:'Cormorant Garamond',serif;
 font-size:70px;
 
 color:#b08d57;
-
-}
-
-
-
-@media(max-width:700px){
-
-
-h1{
-
-font-size:45px;
-
-}
-
-
-.route{
-
-gap:10px;
-
-}
-
-
-.path{
-
-width:120px;
-
-}
-
-
-#countdown{
-
-gap:15px;
-
-}
-
-
-#countdown strong{
-
-font-size:45px;
-
-}
-
 
 }
