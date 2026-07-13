@@ -1,195 +1,182 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
+
 
 
 body{
 
-    background:#faf8f4;
+background:#faf8f4;
 
-    color:#222;
+min-height:100vh;
 
-    font-family:'Montserrat', sans-serif;
+display:flex;
 
-    min-height:100vh;
+align-items:center;
 
-    display:flex;
+justify-content:center;
 
-    justify-content:center;
+color:#222;
 
-    align-items:center;
+font-family:'Montserrat', sans-serif;
 
 }
 
 
-
-/* CONTAINER PRINCIPAL */
 
 .container{
 
-    width:100%;
+width:100%;
 
-    max-width:1000px;
+max-width:900px;
 
-    text-align:center;
+padding:40px;
 
-    padding:40px;
+text-align:center;
 
 }
 
 
-
-/* TITULO */
 
 h1{
 
-    font-family:'Cormorant Garamond', serif;
+font-family:'Cormorant Garamond',serif;
 
-    font-size:64px;
+font-size:65px;
 
-    font-weight:500;
+font-weight:500;
 
-    margin-bottom:45px;
-
-    color:#222;
+margin-bottom:70px;
 
 }
 
 
 
-/* MAPA */
+.journey{
 
-.map-container{
+display:flex;
 
-    position:relative;
+align-items:center;
 
-    width:850px;
+justify-content:center;
 
-    max-width:90vw;
-
-    margin:0 auto 40px;
+gap:25px;
 
 }
 
 
 
-.world-map{
+.country{
 
-    width:100%;
+display:flex;
 
-    display:block;
+flex-direction:column;
 
-    opacity:0.55;
-
-}
-
-
-
-/* PONTOS DOS PAÍSES */
-
-.location{
-
-    position:absolute;
-
-    font-size:35px;
+align-items:center;
 
 }
 
 
 
-.brazil{
+.country span{
 
-    left:27%;
-
-    top:59%;
+font-size:45px;
 
 }
 
 
 
-.australia{
+.country p{
 
-    right:13%;
+margin-top:10px;
 
-    top:69%;
+font-size:15px;
 
-}
+letter-spacing:2px;
 
-
-
-/* LINHA DA ROTA */
-
-.route-line{
-
-    position:absolute;
-
-    left:30%;
-
-    top:60%;
-
-    width:45%;
-
-    border-top:2px dashed #b08d57;
-
-    transform:rotate(-12deg);
+color:#555;
 
 }
 
 
 
-/* AVIÃO */
+.route{
+
+position:relative;
+
+width:300px;
+
+height:50px;
+
+}
+
+
+
+.line{
+
+position:absolute;
+
+width:100%;
+
+top:50%;
+
+border-top:1.5px dashed #b08d57;
+
+}
+
+
 
 .plane{
 
-    position:absolute;
+position:absolute;
 
-    width:50px;
+width:45px;
 
-    left:30%;
+top:8px;
 
-    top:53%;
+left:0;
 
-    animation:fly 8s linear infinite;
-
-}
-
-
-
-/* MOVIMENTO DO AVIÃO */
-
-@keyframes fly{
-
-
-    from{
-
-        left:30%;
-
-    }
-
-
-    to{
-
-        left:72%;
-
-    }
+animation:flight 7s linear infinite;
 
 }
 
 
 
-/* CONTADOR */
+@keyframes flight{
+
+
+from{
+
+left:0;
+
+}
+
+
+to{
+
+left:calc(100% - 45px);
+
+}
+
+
+}
+
+
+
 
 #countdown{
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:45px;
+gap:45px;
 
-    margin-top:45px;
+margin-top:80px;
 
 }
 
@@ -197,11 +184,9 @@ h1{
 
 #countdown div{
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
-
-    align-items:center;
+flex-direction:column;
 
 }
 
@@ -209,15 +194,11 @@ h1{
 
 #countdown strong{
 
-    font-family:'Cormorant Garamond', serif;
+font-family:'Cormorant Garamond',serif;
 
-    font-size:75px;
+font-size:75px;
 
-    font-weight:400;
-
-    line-height:1;
-
-    color:#222;
+font-weight:400;
 
 }
 
@@ -225,112 +206,92 @@ h1{
 
 #countdown span{
 
-    margin-top:10px;
+font-size:12px;
 
-    font-size:12px;
+letter-spacing:3px;
 
-    text-transform:uppercase;
+text-transform:uppercase;
 
-    letter-spacing:3px;
+color:#777;
 
-    color:#777;
+margin-top:8px;
 
 }
 
 
-
-/* DATA */
 
 .date{
 
-    margin-top:40px;
+margin-top:45px;
 
-    font-size:16px;
+font-size:16px;
 
-    color:#777;
+color:#777;
 
 }
 
 
-
-/* FINAL */
 
 #finalMessage{
 
-    display:none;
+display:none;
 
-    margin-top:50px;
+margin-top:50px;
 
-    font-family:'Cormorant Garamond', serif;
+font-family:'Cormorant Garamond',serif;
 
-    font-size:75px;
+font-size:75px;
 
-    color:#b08d57;
+color:#b08d57;
 
 }
 
 
 
-/* CELULAR */
 
 @media(max-width:700px){
 
 
-    .container{
+h1{
 
-        padding:20px;
+font-size:45px;
 
-    }
-
-
-
-    h1{
-
-        font-size:45px;
-
-        margin-bottom:30px;
-
-    }
+}
 
 
+.journey{
 
-    .map-container{
+gap:10px;
 
-        width:100%;
-
-    }
-
+}
 
 
-    .location{
+.route{
 
-        font-size:25px;
+width:120px;
 
-    }
-
-
-
-    .plane{
-
-        width:35px;
-
-    }
+}
 
 
+.country span{
 
-    #countdown{
+font-size:30px;
 
-        gap:15px;
-
-    }
-
+}
 
 
-    #countdown strong{
+#countdown{
 
-        font-size:45px;
+gap:15px;
 
-    }
+}
+
+
+#countdown strong{
+
+font-size:45px;
+
+}
 
 
 }
