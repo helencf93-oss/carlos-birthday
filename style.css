@@ -16,13 +16,13 @@ min-height:100vh;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 color:#222;
 
-font-family:'Montserrat', sans-serif;
+font-family:'Montserrat',sans-serif;
 
 }
 
@@ -32,7 +32,7 @@ font-family:'Montserrat', sans-serif;
 
 width:100%;
 
-max-width:900px;
+max-width:950px;
 
 padding:40px;
 
@@ -64,7 +64,7 @@ align-items:center;
 
 justify-content:center;
 
-gap:25px;
+gap:30px;
 
 }
 
@@ -84,7 +84,7 @@ align-items:center;
 
 .country span{
 
-font-size:45px;
+font-size:42px;
 
 }
 
@@ -92,7 +92,7 @@ font-size:45px;
 
 .country p{
 
-margin-top:10px;
+margin-top:12px;
 
 font-size:15px;
 
@@ -104,11 +104,13 @@ color:#555;
 
 
 
+/* LINHA DA VIAGEM */
+
 .route{
 
 position:relative;
 
-width:300px;
+width:320px;
 
 height:50px;
 
@@ -130,35 +132,54 @@ border-top:1.5px dashed #b08d57;
 
 
 
-.plane{
+/* PONTO DOURADO */
+
+.gold-dot{
 
 position:absolute;
 
-width:45px;
-
-top:8px;
+top:calc(50% - 6px);
 
 left:0;
 
-animation:flight 7s linear infinite;
+width:12px;
+
+height:12px;
+
+background:#b08d57;
+
+border-radius:50%;
+
+box-shadow:0 0 12px rgba(176,141,87,.5);
+
+animation:travel 7s ease-in-out infinite;
 
 }
 
 
 
-@keyframes flight{
+@keyframes travel{
 
 
-from{
+0%{
 
 left:0;
 
 }
 
 
-to{
 
-left:calc(100% - 45px);
+50%{
+
+left:50%;
+
+}
+
+
+
+100%{
+
+left:calc(100% - 12px);
 
 }
 
@@ -166,6 +187,8 @@ left:calc(100% - 45px);
 }
 
 
+
+/* CONTADOR */
 
 
 #countdown{
@@ -176,7 +199,7 @@ justify-content:center;
 
 gap:45px;
 
-margin-top:80px;
+margin-top:90px;
 
 }
 
@@ -200,6 +223,8 @@ font-size:75px;
 
 font-weight:400;
 
+line-height:1;
+
 }
 
 
@@ -208,16 +233,19 @@ font-weight:400;
 
 font-size:12px;
 
-letter-spacing:3px;
-
 text-transform:uppercase;
+
+letter-spacing:3px;
 
 color:#777;
 
-margin-top:8px;
+margin-top:10px;
 
 }
 
+
+
+/* DATA */
 
 
 .date{
@@ -230,6 +258,9 @@ color:#777;
 
 }
 
+
+
+/* FINAL */
 
 
 #finalMessage{
@@ -248,8 +279,17 @@ color:#b08d57;
 
 
 
+/* MOBILE */
+
 
 @media(max-width:700px){
+
+
+.container{
+
+padding:20px;
+
+}
 
 
 h1{
@@ -259,6 +299,7 @@ font-size:45px;
 }
 
 
+
 .journey{
 
 gap:10px;
@@ -266,11 +307,13 @@ gap:10px;
 }
 
 
+
 .route{
 
-width:120px;
+width:130px;
 
 }
+
 
 
 .country span{
@@ -280,11 +323,13 @@ font-size:30px;
 }
 
 
+
 #countdown{
 
 gap:15px;
 
 }
+
 
 
 #countdown strong{
