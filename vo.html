@@ -13,7 +13,6 @@ html, body{
 .player{
     position:relative;
     width:100%;
-    height:auto;
 }
 
 video{
@@ -62,8 +61,11 @@ video{
 const video = document.getElementById("video");
 const play = document.getElementById("play");
 
-play.addEventListener("click", () => {
-    video.play();
+play.addEventListener("click", async () => {
+    try {
+        await video.play();
+        play.style.display = "none";
+    } catch(e) {}
 });
 
 video.addEventListener("play", () => {
@@ -71,7 +73,9 @@ video.addEventListener("play", () => {
 });
 
 video.addEventListener("pause", () => {
-    play.style.display = "block";
+    if(video.currentTime < video.duration){
+        play.style.display = "block";
+    }
 });
 
 video.addEventListener("ended", () => {
