@@ -17,6 +17,7 @@ html, body{
 
 video{
     width:100%;
+    height:auto;
     display:block;
     background:#000;
 }
@@ -34,7 +35,7 @@ video{
     background:rgba(0,0,0,.65);
     color:white;
     font-size:42px;
-    transition:.2s;
+    z-index:10;
 }
 
 .play:hover{
@@ -48,7 +49,7 @@ video{
 
 <div class="player">
 
-<video id="video" controls preload="metadata" playsinline>
+<video id="video" controls preload="auto" playsinline>
     <source src="https://helencf93-oss.github.io/carlos-birthday/parabenspai.mp4" type="video/mp4">
 </video>
 
