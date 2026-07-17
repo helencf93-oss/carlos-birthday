@@ -106,7 +106,7 @@ text:"Amo a forma como você me trata, o quanto se preocupa comigo e demonstra c
 },
 
 {
-title:"Me faz sentir segura",
+title:"Protetor",
 text:"Quando estou com você, eu me sinto segura, amada e em paz."
 },
 
@@ -162,7 +162,7 @@ text:"Te admiro como ser humano e sei que tenho muito a aprender com você."
 
 {
 title:"Especial",
-text:"Você tem um jeito único e cativante."
+text:"Você tem um jeito único e cativante. Tem uma luz incrível"
 },
 
 {
@@ -172,7 +172,7 @@ text:"Você é uma pessoa verdadeira e cheia de amor."
 
 {
 title:"Meu amor ❤️",
-text:"Entre todas as qualidades que eu poderia escrever, existe uma que resume todas elas: você é a pessoa que eu escolhi amar e construir uma vida junto."
+text:"Se eu tivesse que resumir tudo em uma única qualidade, seria esta: você é alguém raro. A combinação da sua bondade, do seu caráter, do seu cuidado e de tudo o que faz de você quem você é torna você único."
 }
 
 ];
