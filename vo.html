@@ -1,17 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeo da Vó</title>
-</head>
-<body style="margin:0; background:#000;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <video controls width="100%">
-        vo.MP4
-        Seu navegador não suporta vídeo.
-    </video>
+<style>
+html, body{
+    margin:0;
+    background:#000;
+}
+
+.player{
+    position:relative;
+    width:100%;
+}
+
+video{
+    width:100%;
+    display:block;
+    background:#000;
+}
+
+.play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    background:rgba(0,0,0,.65);
+    color:white;
+    font-size:42px;
+}
+
+.play:hover{
+    transform:translate(-50%,-50%) scale(1.08);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="player">
+
+<video id="video" controls preload="auto" playsinline>
+    <source src="https://helencf93-oss.github.io/carlos-birthday/vo.MP4" type="video/mp4">
+</video>
+
+<button class="play" id="play">▶</button>
+
+</div>
+
+<script>
+const video = document.getElementById("video");
+const play = document.getElementById("play");
+
+play.addEventListener("click", () => {
+    video.play();
+});
+
+video.addEventListener("play", () => {
+    play.style.display = "none";
+});
+
+video.addEventListener("pause", () => {
+    play.style.display = "block";
+});
+
+video.addEventListener("ended", () => {
+    play.style.display = "block";
+});
+</script>
 
 </body>
 </html>
