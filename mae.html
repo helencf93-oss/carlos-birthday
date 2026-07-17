@@ -34,7 +34,6 @@ video{
     background:rgba(0,0,0,.65);
     color:white;
     font-size:42px;
-    transition:.2s;
 }
 
 .play:hover{
@@ -48,7 +47,7 @@ video{
 
 <div class="player">
 
-<video id="video" controls preload="metadata" playsinline>
+<video id="video" controls preload="auto" playsinline>
     <source src="https://helencf93-oss.github.io/carlos-birthday/mae.MP4" type="video/mp4">
 </video>
 
@@ -60,11 +59,8 @@ video{
 const video = document.getElementById("video");
 const play = document.getElementById("play");
 
-play.addEventListener("click", async () => {
-    try {
-        await video.play();
-        play.style.display = "none";
-    } catch(e) {}
+play.addEventListener("click", () => {
+    video.play();
 });
 
 video.addEventListener("play", () => {
@@ -72,9 +68,7 @@ video.addEventListener("play", () => {
 });
 
 video.addEventListener("pause", () => {
-    if(video.currentTime < video.duration){
-        play.style.display = "block";
-    }
+    play.style.display = "block";
 });
 
 video.addEventListener("ended", () => {
